@@ -7,13 +7,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class HelloSender {
 
-	@Autowired
-	private AmqpTemplate rabbitTemplate;
+    @Autowired
+    private AmqpTemplate rabbitTemplate;
 
-	public void send(String content) {
+    public void send(String content) {
 //		String context = "hello " + new Date();
 //		System.out.println("Sender : " + context);
-		this.rabbitTemplate.convertAndSend("hello", content);
-	}
+        this.rabbitTemplate.convertAndSend("hello", content);
+    }
 
 }
